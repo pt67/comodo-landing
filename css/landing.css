@@ -1,0 +1,32 @@
+@media (prefers-color-scheme: dark) {
+    .web-app {
+        background: #121212;
+        color: #ffffff;
+    }
+
+    .navbar {
+        background: #1e1e1e;
+    }
+
+    .feature-card {
+        background: #1e1e1e;
+    }
+
+    .stats-section {
+        background: #1a1a1a;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+}

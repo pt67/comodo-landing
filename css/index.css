@@ -1,0 +1,217 @@
+body { font-family: Arial, sans-serif; background-color: #f4f4f9; color: #333; padding: 20px; }
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"]  
+{
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search_area #search{
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+}
+
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+#connected {
+    text-align: center;
+    font-size: 18px;
+    color: #28a745;
+    margin-top: 20px;
+}
+
+#dataContainer {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#data {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-height: 300px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+#data div {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#data div:last-child {
+    border-bottom: none; /* Remove the border from the last item */
+}
+
+#data p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Style for the search area */
+#search_area {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the data container */
+#dataContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#data ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#data ul li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#data ul li button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#data ul li button.edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#data ul li button.edit:hover {
+    background-color: #218838;
+}
+
+#data ul li button.delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#data ul li button.delete:hover {
+    background-color: #c82333;
+}
+
+#data ul li button.view {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+#data ul li button.view:hover {
+    background-color: #138496;
+}
+
+/* Style for the load more button */
+#loadMoreButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#loadMoreButton:hover {
+    background-color: #0056b3;
+}
+
+
+
