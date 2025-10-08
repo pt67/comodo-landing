@@ -19,239 +19,9 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <link rel="manifest" href="manifest.json">
         <link rel="apple-touch-icon" href="img/icon-192x192.png">
-        <link rel="stylesheet" href="css/index.css">
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <link rel="stylesheet" href="css/landing.css">
         <title>Comodo</title>
-        <style>
-	/* Pink theme variables */
-	:root{
-		--primary: #e91e63;         /* main pink */
-		--primary-dark: #c2185b;    /* darker pink */
-		--primary-light: #f8bbd0;   /* soft accent */
-		--bg: #ffffff;
-		--muted: #666666;
-		--card-shadow: rgba(0,0,0,0.08);
-		--hero-text: #ffffff;
-	}
-
-	.loader-container {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: var(--bg);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 9999;
-	}
-	.loader {
-		border: 5px solid #f3f3f3;
-		border-radius: 50%;
-		border-top: 5px solid var(--primary);
-		width: 50px;
-		height: 50px;
-		animation: spin 1s linear infinite;
-	}
-	@keyframes spin {
-		0% { transform: rotate(0deg); }
-		100% { transform: rotate(360deg); }
-	}
-
-	.web-app {
-		font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-		line-height: 1.6;
-		color: var(--muted);
-		background: var(--bg);
-	}
-
-	.navbar {
-		padding: 1rem 2rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background: var(--bg);
-		box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-	}
-	.brand {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-	}
-	.brand img { height: 40px; }
-	.brand h1 { margin:0; color: var(--primary-dark); font-size: 1.25rem; }
-
-	.hero-section {
-		background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-		color: var(--hero-text);
-		padding: 6rem 2rem;
-		text-align: center;
-	}
-	.hero-title {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-		letter-spacing: -0.5px;
-	}
-	.hero-subtitle {
-		font-size: 1.25rem;
-		opacity: 0.95;
-		max-width: 640px;
-		margin: 0 auto;
-	}
-
-	.stats-section {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-		padding: 4rem 2rem;
-		background: #fbfbfb;
-		text-align: center;
-	}
-	.stat-item h3 {
-		font-size: 2.5rem;
-		color: var(--primary-dark);
-		margin-bottom: 0.5rem;
-	}
-	.stat-item p { color: var(--muted); }
-
-	.features-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		padding: 4rem 2rem;
-		background: var(--bg);
-	}
-	.feature-card {
-		padding: 2rem;
-		border-radius: 12px;
-		background: linear-gradient(180deg, #ffffff, #fff);
-		box-shadow: 0 6px 18px var(--card-shadow);
-		transition: transform 0.28s ease, box-shadow 0.28s ease;
-	}
-	.feature-card:hover {
-		transform: translateY(-6px);
-		box-shadow: 0 10px 26px rgba(0,0,0,0.09);
-	}
-
-	.cta-section {
-		background: linear-gradient(180deg, var(--primary), var(--primary-dark));
-		color: var(--hero-text);
-		padding: 4rem 2rem;
-		text-align: center;
-	}
-	.download-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.9rem 1.6rem;
-		background: var(--bg);
-		color: var(--primary-dark);
-		border-radius: 30px;
-		font-weight: 600;
-		text-decoration: none;
-		margin-top: 2rem;
-		transition: transform 0.22s ease, box-shadow 0.22s ease;
-		box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-	}
-	.download-button:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-	}
-
-	#scrollToTop {
-		position: fixed;
-		bottom: 20px;
-		right: 20px;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		background: var(--primary);
-		color: white;
-		border: none;
-		cursor: pointer;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 24px;
-		box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-		z-index: 9999;
-	}
-	#scrollToTop.visible {
-		opacity: 1;
-		pointer-events: auto;
-	}
-	#scrollToTop:hover {
-		transform: translateY(-3px);
-		background: var(--primary-dark);
-	}
-
-	/* Responsive styles */
-	@media (max-width: 768px) {
-		.features-grid { grid-template-columns: 1fr; }
-		form { width: 100%; padding: 1rem; }
-		input, button { width: 100%; margin: 0.5rem 0; }
-	}
-
-	/* Cookie consent */
-	#cookieConsent {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0, 0, 0, 0.85);
-		color: white;
-		padding: 1rem;
-		display: none;
-		justify-content: space-between;
-		align-items: center;
-		z-index: 9999;
-	}
-	#cookieConsent button {
-		background: var(--primary);
-		color: white;
-		border: none;
-		padding: 0.5rem 1rem;
-		border-radius: 4px;
-		cursor: pointer;
-	}
-
-	/* Bottom Navigation */
-	.bottom-nav {
-		display: none;
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: var(--bg);
-		box-shadow: 0 -2px 10px rgba(0,0,0,0.06);
-		z-index: 1000;
-	}
-	.bottom-nav-menu {
-		display: flex;
-		justify-content: space-around;
-		padding: 10px 0;
-	}
-	.nav-item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		color: var(--muted);
-		text-decoration: none;
-		font-size: 12px;
-	}
-	.nav-item.active { color: var(--primary-dark); }
-	.nav-item i { font-size: 24px; margin-bottom: 4px; }
-
-	@media (max-width: 768px) {
-		.bottom-nav { display: block; }
-		.navbar { display: none; }
-		#scrollToTop { bottom: 70px; }
-		.app, .web-app { padding-bottom: 60px; }
-	}
-</style>
     </head>
     <body>
     <div class="loader-container" id="loader">
@@ -303,15 +73,21 @@
             <nav class="navbar">
                 <div class="brand">
                     <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 1rem;">
-                    <img src="img/logo.png" alt="Comodo Logo">
-                    <h1>Comodo</h1>
+                        <img src="img/logo.png" alt="Comodo Logo">
+                        <h1>Comodo</h1>
                     </a>
                 </div>
-                <div class="nav-links">
-                    <a href="#features" style="margin-right: 1.5rem; text-decoration: none; color: #333; font-weight: 600;">Features</a>
-                    <a href="#download" style="text-decoration: none; color: #333; font-weight: 600;">Download</a>
-                    <a href="terms.html" style="margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: 600;">Terms Of Use</a>
-                    <a href="privacy.html" style="margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: 600;">Privacy Policy</a>
+                <!-- Hamburger button for mobile -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="#features">Features</a>
+                    <a href="#download">Download</a>
+                    <a href="terms.html">Terms Of Use</a>
+                    <a href="privacy.html">Privacy Policy</a>
                 </div>
             </nav>
 
@@ -385,39 +161,33 @@
                     <i>➕</i>
                     <span>Features</span>
                 </a>
-                <a href="comodo.apk" class="nav-item" data-section="list">
+                <a href="#download" class="nav-item" data-section="list">
                     <i>📋</i>
                     <span>Download</span>
                 </a>
             </div>
         </div>
+		<!-- Add footer with owner info -->
+		<footer class="footer">
+            © Comodo — Owned by <a href="https://crazcodernp.com" class="owner-link">crazcodernp.com</a>
+        </footer>
 
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
-    </body>
-</html>
-        <div class="bottom-nav">
-            <div class="bottom-nav-menu">
-                <a href="#home" class="nav-item active" data-section="home">
-                    <i>🏠</i>
-                    <span>Home</span>
-                </a>
-                <!-- <a href="#search_area" class="nav-item" data-section="search">
-                    <i>🔍</i>
-                    <span>Search</span>
-                </a> -->
-                <a href="#features" class="nav-item" data-section="add">
-                    <i>➕</i>
-                    <span>Features</span>
-                </a>
-                <a href="comodo.apk" class="nav-item" data-section="list">
-                    <i>📋</i>
-                    <span>Download</span>
-                </a>
-            </div>
-        </div>
-
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
+        <script>
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('hamburgerBtn');
+            var nav = document.getElementById('navLinks');
+            if(btn && nav) {
+                btn.addEventListener('click', function() {
+                    nav.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+                });
+            }
+        });
+        </script>
+        
+        
     </body>
 </html>
