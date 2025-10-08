@@ -220,7 +220,7 @@
     transition: all 0.3s cubic-bezier(.4,2,.6,1);
     box-shadow: 0 1px 4px rgba(233,30,99,0.10);
     opacity: 1;
-	color: transparent
+	color: transparent;
 }
 
 /* Hamburger open animation */
@@ -328,7 +328,7 @@
 	}
 	.footer {
 		font-size: 13px !important;
-		padding: 12px 0 8px 0 !important;
+		padding: 12px 0 30px 0 !important;
 		margin: 0 0 60px 0 !important;
 		position: relative;
 		background: var(--bg);
