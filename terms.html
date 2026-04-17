@@ -1,68 +1,193 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Terms of Use — Comodo</title>
+
 <style>
 :root{
   --primary:#e91e63;
   --primary-dark:#c2185b;
-  --bg:#fff;
+  --bg:#f9fafb;
+  --text:#333;
   --muted:#666;
 }
-body{font-family:Segoe UI,system-ui,-apple-system,sans-serif;margin:0;background:var(--bg);color:var(--muted);line-height:1.6}
+
+body{
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* Header */
 .header{
   background:linear-gradient(135deg,var(--primary-dark),var(--primary));
-  color:#fff;padding:48px 16px;text-align:center;
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
 }
-.container{max-width:900px;margin:32px auto;padding:0 16px}
-h1{margin:0 0 8px;font-size:28px}
-.card{background:#fff;border-radius:10px;padding:24px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
-a.button{display:inline-block;margin-top:16px;padding:10px 14px;border-radius:8px;background:var(--primary);color:#fff;text-decoration:none;font-weight:600}
-.footer{max-width:900px;margin:24px auto;text-align:center;color:#999;font-size:14px}
 
-/* Mobile improvements */
-@media (max-width: 768px) {
-  .header{padding:28px 8px;}
-  .container{margin:16px auto;padding:0 6px;}
-  .card{padding:12px;font-size:1rem;}
-  h1{font-size:1.3rem;}
-  a.button{font-size:1rem;padding:10px;margin-top:10px;}
-  .footer{font-size:12px;}
+.header h1{
+  margin:0;
+  font-size:32px;
+  letter-spacing:0.5px;
+}
+
+.header p{
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  color:#eee;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:0 16px;
+}
+
+/* Card */
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:32px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+h2{
+  margin-top:28px;
+  font-size:20px;
+  color:var(--text);
+}
+
+p{
+  margin-top:8px;
+  color:var(--muted);
+}
+
+/* Buttons */
+.actions{
+  margin-top:28px;
+}
+
+a.button{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:8px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s ease;
+}
+
+a.button:hover{
+  background:var(--primary-dark);
+}
+
+a.secondary{
+  background:#eee;
+  color:#333;
+  margin-left:10px;
+}
+
+a.secondary:hover{
+  background:#ddd;
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:24px 12px;
+  color:#999;
+  font-size:14px;
+}
+
+/* Mobile */
+@media (max-width:768px){
+  .header{padding:40px 12px;}
+  .header h1{font-size:24px;}
+  .container{margin:20px auto;}
+  .card{padding:20px;}
+  h2{font-size:18px;}
 }
 </style>
 </head>
+
 <body>
-  <header class="header">
-    <h1>Terms of Use</h1>
-    <p style="opacity:.95;max-width:780px;margin:auto">Welcome to Comodo. These Terms govern your use of our website and services.</p>
-  </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>1. Acceptance</h2>
-      <p>By accessing or using Comodo, you agree to be bound by these Terms. If you do not agree, do not use the service.</p>
+<header class="header">
+  <h1>Terms of Use</h1>
+  <p>
+    These Terms of Use (“Terms”) govern your access to and use of Comodo’s website,
+    applications, and services. Please read them carefully.
+  </p>
+</header>
 
-      <h2>2. Use of Service</h2>
-      <p>Use the site only for lawful purposes. You must not misuse the service or attempt to access parts of the system you are not authorized to use.</p>
+<main class="container">
+  <section class="card">
 
-      <h2>3. Intellectual Property</h2>
-      <p>All content, logos and trademarks are the property of their respective owners. Reuse without permission is prohibited.</p>
+    <h2>1. Acceptance of Terms</h2>
+    <p>
+      By accessing or using Comodo, you acknowledge that you have read, understood,
+      and agree to be bound by these Terms. If you do not agree, you must discontinue
+      use of the service immediately.
+    </p>
 
-      <h2>4. Limitation of Liability</h2>
-      <p>To the fullest extent permitted by law, Comodo is not liable for indirect or consequential losses resulting from use of the service.</p>
+    <h2>2. Use of Services</h2>
+    <p>
+      You agree to use the service only for lawful purposes and in compliance with
+      all applicable laws and regulations. Unauthorized use, including attempting to
+      gain access to restricted areas or systems, is strictly prohibited.
+    </p>
 
-      <h2>5. Changes</h2>
-      <p>We may modify these Terms from time to time; continued use constitutes acceptance of changes.</p>
+    <h2>3. Intellectual Property</h2>
+    <p>
+      All content, including but not limited to text, graphics, logos, and software,
+      is the property of Comodo or its licensors and is protected by applicable
+      intellectual property laws. You may not copy, reproduce, or distribute any
+      content without prior written permission.
+    </p>
 
+    <h2>4. Limitation of Liability</h2>
+    <p>
+      To the maximum extent permitted by law, Comodo shall not be liable for any
+      indirect, incidental, or consequential damages arising out of or related to
+      your use of the service.
+    </p>
+
+    <h2>5. Modifications to Terms</h2>
+    <p>
+      We reserve the right to update or modify these Terms at any time without prior
+      notice. Continued use of the service after changes constitutes your acceptance
+      of the revised Terms.
+    </p>
+
+    <h2>6. Contact Information</h2>
+    <p>
+      If you have any questions regarding these Terms, please contact us through the
+      official communication channels provided on our website.
+    </p>
+
+    <div class="actions">
       <a class="button" href="index.html">Back to Home</a>
-      <a class="button" href="privacy.html" style="background:var(--primary-dark);margin-left:8px">Privacy Policy</a>
-    </section>
-  </main>
+      <a class="button secondary" href="privacy.html">Privacy Policy</a>
+    </div>
 
-  <div class="footer">
-    <small>© Comodo — All rights reserved.</small>
-  </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>© 2026 Comodo. All rights reserved.</small>
+</footer>
+
 </body>
 </html>

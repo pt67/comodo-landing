@@ -1,9 +1,5 @@
-/* ============================================
-   COMODO - Professional Landing Page Styles
-   ============================================ */
-
-/* CSS Variables - Theme Definition */
-:root {
+/* Pink theme variables */
+:root{
 	--primary: #e91e63;         /* main pink */
 	--primary-dark: #c2185b;    /* darker pink */
 	--primary-light: #f8bbd0;   /* soft accent */
@@ -75,14 +71,43 @@
 .hero-section {
 	background: linear-gradient(135deg, var(--primary-dark), var(--primary));
 	color: var(--hero-text);
-	padding: 6rem 2rem;
+	padding: 6rem;
 	text-align: center;
+	
 }
+
+.hero-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1.5rem;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.hero-title-container {
+	max-width: 800px;
+	
+}
+
+.image-container {
+	width: 300px;
+}
+
+.hero-section img {
+	width: 220px;
+	margin-bottom: 1.5rem;
+	
+}
+
 .hero-title {
 	font-size: 3rem;
 	margin-bottom: 1rem;
 	letter-spacing: -0.5px;
 }
+
+
+
 .hero-subtitle {
 	font-size: 1.25rem;
 	opacity: 0.95;
