@@ -1,65 +1,328 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacy Policy — Comodo</title>
-<style>
-:root{
-  --primary:#e91e63;
-  --primary-dark:#c2185b;
-  --bg:#fff;
-  --muted:#666;
-}
-body{font-family:Segoe UI,system-ui,-apple-system,sans-serif;margin:0;background:var(--bg);color:var(--muted);line-height:1.6}
-.header{
-  background:linear-gradient(135deg,var(--primary-dark),var(--primary));
-  color:#fff;padding:48px 16px;text-align:center;
-}
-.container{max-width:900px;margin:32px auto;padding:0 16px}
-h1{margin:0 0 8px;font-size:28px}
-.card{background:#fff;border-radius:10px;padding:24px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
-a.button{display:inline-block;margin-top:16px;padding:10px;border-radius:8px;background:var(--primary);color:#fff;text-decoration:none;font-weight:600}
-.footer{max-width:900px;margin:24px auto;text-align:center;color:#999;font-size:14px}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Comodo - Enterprise Asset Management System. Learn how we protect your data and privacy.">
+    <meta name="keywords" content="privacy policy, data protection, asset management">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e91e63">
+    <title>Privacy Policy — Comodo</title>
+    <style>
+        :root {
+            --primary: #e91e63;
+            --primary-dark: #c2185b;
+            --bg: #ffffff;
+            --bg-light: #fbfbfb;
+            --text-primary: #212121;
+            --text-secondary: #666666;
+            --border-color: #eeeeee;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
 
-/* Mobile improvements */
-@media (max-width: 768px) {
-  .header{padding:28px 8px;}
-  .container{margin:16px auto;padding:0 6px;}
-  .card{padding:12px;font-size:1rem;}
-  h1{font-size:1.3rem;}
-  a.button{font-size:1rem;padding:10px;margin-top:10px;}
-  .footer{font-size:12px;}
-}
-</style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 2rem;
+        }
+
+        .navbar a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .navbar a:hover {
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: #ffffff;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.09) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 780px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Card Styling */
+        .card {
+            background: var(--bg);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem 0;
+            font-weight: 700;
+        }
+
+        .card h2:first-child {
+            margin-top: 0;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Button Styles */
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+        }
+
+        a.button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.2);
+        }
+
+        a.button.secondary {
+            background: var(--bg-light);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        a.button.secondary:hover {
+            background: var(--border-color);
+        }
+
+        /* Footer */
+        .footer {
+            max-width: 900px;
+            margin: 3rem auto;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .header {
+                padding: 2.5rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.75rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                margin: 1.5rem auto;
+                padding: 0 1rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .card h2 {
+                font-size: 1.25rem;
+                margin: 1.5rem 0 0.75rem 0;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            a.button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer {
+                padding: 0 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: 1.25rem;
+            }
+
+            .card h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <h1>Privacy Policy</h1>
-    <p style="opacity:.95;max-width:780px;margin:auto">Your privacy matters. This policy explains what data we collect and how we use it.</p>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" style="font-size: 1.1rem;">← Comodo Home</a>
+    </nav>
 
-  <main class="container">
-    <section class="card">
-      <h2>Information We Collect</h2>
-      <p>We collect basic account and device information required to provide the service. We do not sell personal data.</p>
+    <!-- Header -->
+    <header class="header">
+        <h1>Privacy Policy</h1>
+        <p>Your privacy matters. This policy explains what data we collect and how we use it.</p>
+    </header>
 
-      <h2>How We Use Data</h2>
-      <p>Data is used to operate and improve the service, provide customer support, and comply with legal obligations.</p>
+    <!-- Main Content -->
+    <main class="container">
+        <article class="card">
+            <h2>Information We Collect</h2>
+            <p>We collect basic account and device information required to provide the Comodo service. This includes:</p>
+            <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                <li>Account name and contact information</li>
+                <li>Device and equipment data you provide</li>
+                <li>Usage analytics and performance data</li>
+            </ul>
+            <p style="margin-top: 1rem;"><strong>We do not sell personal data</strong> to third parties without explicit consent.</p>
 
-      <h2>Security</h2>
-      <p>We take reasonable measures to protect personal information, but cannot guarantee absolute security.</p>
+            <h2>How We Use Data</h2>
+            <p>Data is used to:</p>
+            <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                <li>Operate and improve the Comodo service</li>
+                <li>Provide customer support and assistance</li>
+                <li>Comply with legal and regulatory obligations</li>
+                <li>Enhance security and prevent fraud</li>
+                <li>Send service updates and notifications</li>
+            </ul>
 
-      <h2>Contact</h2>
-      <p>For privacy inquiries contact: mail@comodo.biz</p>
+            <h2>Data Security</h2>
+            <p>We take reasonable and appropriate measures to protect personal information through:</p>
+            <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                <li>Encryption in transit and at rest</li>
+                <li>Secure authentication protocols</li>
+                <li>Regular security audits and updates</li>
+                <li>Access controls and monitoring</li>
+            </ul>
+            <p style="margin-top: 1rem;"><em>However, we cannot guarantee absolute security. Please use strong passwords and protect your account credentials.</em></p>
 
-      <a class="button" href="index.html">Back to Home</a>
-      <a class="button" href="terms.html" style="background:var(--primary-dark);margin-left:8px">Terms of Use</a>
-    </section>
-  </main>
+            <h2>Third-Party Services</h2>
+            <p>Comodo may use third-party services such as Firebase for data storage and analytics. These services are bound by similar privacy commitments.</p>
 
-  <div class="footer">
-    <small>© Comodo — All rights reserved.</small>
-  </div>
+            <h2>Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                <li>Access your personal data</li>
+                <li>Request data correction or deletion</li>
+                <li>Opt-out of marketing communications</li>
+                <li>Request a copy of your data</li>
+            </ul>
+
+            <h2>Contact & Support</h2>
+            <p>For privacy inquiries or requests, please contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:mail@comodo.biz" style="color: var(--primary); text-decoration: none;">mail@comodo.biz</a></p>
+            <p style="margin-top: 0.5rem;"><strong>Website:</strong> <a href="https://crazcodernp.com" style="color: var(--primary); text-decoration: none;" rel="noopener noreferrer">crazcodernp.com</a></p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Continued use of Comodo constitutes acceptance of any changes.</p>
+
+            <div class="button-group">
+                <a href="index.html" class="button">← Back to Home</a>
+                <a href="terms.html" class="button secondary">Terms of Use →</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>© 2024 Comodo</strong></p>
+        <p style="opacity: 0.8;">Enterprise Asset Management System — All rights reserved.</p>
+        <p style="font-size: 0.85rem; margin-top: 1rem; opacity: 0.6;">Last updated: 2024</p>
+    </footer>
 </body>
 </html>

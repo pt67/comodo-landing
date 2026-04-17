@@ -1,5 +1,9 @@
-/* Pink theme variables */
-:root{
+/* ============================================
+   COMODO - Professional Landing Page Styles
+   ============================================ */
+
+/* CSS Variables - Theme Definition */
+:root {
 	--primary: #e91e63;         /* main pink */
 	--primary-dark: #c2185b;    /* darker pink */
 	--primary-light: #f8bbd0;   /* soft accent */
